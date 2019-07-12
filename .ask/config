@@ -26,7 +26,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-giggle-default",
             "handler": "index.handler",
-            "revisionId": "f1b86235-3eb5-4067-b17d-dea82563e1bd",
+            "revisionId": "c3637c7b-0b0b-405a-b4fe-0487ca8dd9d7",
             "runtime": "nodejs8.10"
           }
         ]
