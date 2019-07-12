@@ -5,13 +5,24 @@
         "en-US": {
           "summary": "Sample Short Description",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
+            "Alexa open giggle",
+            "giggle",
             "help"
           ],
-          "name": "Hello World",
+          "name": "giggle",
+          "description": "Sample Full Description"
+        },
+        "en-GB": {
+          "summary": "Sample Short Description",
+          "examplePhrases": [
+            "Alexa open giggle",
+            "giggle",
+            "help"
+          ],
+          "name": "giggle",
           "description": "Sample Full Description"
         }
+
       },
       "isAvailableWorldwide": true,
       "testingInstructions": "Sample Testing Instructions.",
@@ -22,7 +33,7 @@
       "custom": {
         "endpoint": {
           "sourceDir": "lambda/custom",
-          "uri": "ask-custom-helloworld-default"
+          "uri": "ask-custom-giggle-default"
         }
       }
     },
