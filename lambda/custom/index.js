@@ -13,7 +13,7 @@ const LaunchRequestHandler = {
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
-      .withSimpleCard('Hello Keith', speechText)
+      .withSimpleCard('K Test', speechText)
       .getResponse();
   },
   // <audio src='https://my-apis.000webhostapp.com/audio/Romantic%20Solitude-Instrumental%20(Flute).mp3'/>
