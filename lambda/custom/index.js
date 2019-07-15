@@ -8,7 +8,7 @@ const LaunchRequestHandler = {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
-    const speechText = "Hello Keith <audio src='https://kns-alexa.s3-eu-west-1.amazonaws.com/one-small-step-for-man-48.mp3'/>";
+    const speechText = "Keith Test <audio src='https://kns-alexa.s3-eu-west-1.amazonaws.com/one-small-step-for-man-48.mp3'/>";
 
     return handlerInput.responseBuilder
       .speak(speechText)
