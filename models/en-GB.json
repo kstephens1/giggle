@@ -16,11 +16,45 @@
             "samples": []
           },
           {
-            "name": "HelloWorldIntent",
+            "name": "GiggleIntent",
             "samples": [
               "hello"
             ]
-          }
+          },
+          {
+            "name": "PlayNoteIntent",
+            "slots": [
+                {
+                    "name": "name",
+                    "type": "names"
+                }
+            ],
+            "samples": [
+                "play {name}"
+            ]
+        }
+    ],
+    "types": [
+        {
+            "name": "names",
+            "values": [
+                {
+                    "name": {
+                        "value": "harry"
+                    }
+                },
+                {
+                    "name": {
+                        "value": "chloe"
+                    }
+                }
+            ]
+        }
+
+
+
+
+
         ]
       }
     }

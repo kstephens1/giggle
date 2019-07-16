@@ -10,10 +10,10 @@
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "ee055d6518cd26c2f105f0c3dae6af78"
+            "eTag": "8c7a21f5b0cbaa82cb0642709227d183"
           },
           "en-GB": {
-            "eTag": "ee055d6518cd26c2f105f0c3dae6af78"
+            "eTag": "18e715af2a80b26105288bb83e3feb7b"
           }
         },
         "lambda": [
@@ -26,7 +26,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-custom-giggle-default",
             "handler": "index.handler",
-            "revisionId": "c3637c7b-0b0b-405a-b4fe-0487ca8dd9d7",
+            "revisionId": "e37808c9-b605-4aba-b6f3-08782891ab23",
             "runtime": "nodejs8.10"
           }
         ]

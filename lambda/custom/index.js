@@ -20,20 +20,59 @@ const LaunchRequestHandler = {
 
 };
 
-const HelloWorldIntentHandler = {
+const GiggleIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'HelloWorldIntent';
+      && handlerInput.requestEnvelope.request.intent.name === 'GiggleIntent';
   },
   handle(handlerInput) {
-    const speechText = 'Hello World Keith!';
+    const slots = handlerInput.requestEnvelope.request.intent.slots;
+    const name = slots['name'].value;
+
+    const speechText = 'Hello Keith, GiggleIntent here';
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard('Hello World Keith', speechText)
+      .withSimpleCard('Hello Keith, GiggleIntent here', speechText)
       .getResponse();
   },
 };
+
+
+const PlayNoteIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'PlayNoteIntent';
+  },
+  handle(handlerInput) {
+    
+    const slots = handlerInput.requestEnvelope.request.intent.slots;
+    const name = slots['name'].value;
+    var speechText, audiofile;
+
+    console.log('Got slot value ' + slots['name'].value);
+
+switch(slots['name'].value.toLowerCase()){
+  case 'harry':
+    speechText = "Playing: " + name +  "<audio src='https://kns-alexa.s3-eu-west-1.amazonaws.com/one-small-step-for-man-48.mp3'/>";
+    break;
+
+  case 'chloe':
+//    speechText = 'Playing: ' + name;
+    speechText = "Playing: " + name + "<audio src='https://kns-alexa.s3-eu-west-1.amazonaws.com/one-small-step-for-man-48.mp3'/>";
+    break;
+  
+    default:
+      speechText = 'Name not recognised';
+}
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .withSimpleCard("Giggle Skill", speechText)
+      .getResponse();
+  },
+};
+
 
 const HelpIntentHandler = {
   canHandle(handlerInput) {
@@ -97,7 +136,8 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder
   .addRequestHandlers(
     LaunchRequestHandler,
-    HelloWorldIntentHandler,
+    GiggleIntentHandler,
+    PlayNoteIntentHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler

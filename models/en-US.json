@@ -16,7 +16,7 @@
           "samples": []
         },
         {
-          "name": "HelloWorldIntent",
+          "name": "GiggleIntent",
           "samples": [
             "hello"
           ]
